@@ -2,5 +2,27 @@
   "dependencies": {
     "express": "^4.18.1",
     "sqlite3": "^5.0.6"
-  }
+  },
+  "name": "labs",
+  "description": "These are the instructions on how to operate the awk script for the ranking of the cars in the data_lab1 submodule. You are to run the awk command in your terminal or command line. Your data.csv file will be ran and the output will be of the contents of the file which are of the car rankings. These rankings will then be placed into a seperate file which is called cars_ranked_output.txt.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serverStart": "nodemon Lab4/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drothstein00/Labs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drothstein00/Labs/issues"
+  },
+  "homepage": "https://github.com/drothstein00/Labs#readme"
 }
