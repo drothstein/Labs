@@ -1,14 +1,16 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 
 const db = require("./database.js")
 
 var bodyParser = require("body-parser"); app.use(bodyParser.urlencoded({ extended: false })); app.use(bodyParser.json());
 
+app.use(cors())
+
 app.get('/', (req, res) => {
     res.json('hello world')
 })
-
 
 app.get("/cars", (req, res, next) => {
     var sql = "select * from cars_table"
@@ -211,4 +213,4 @@ Body_Frame_Suspension = COALESCE(?,body_frame_suspension),
         });
 })
 
-    app.listen(3000)
+    app.listen(8080)
