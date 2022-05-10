@@ -3,6 +3,7 @@ import './App.css';
 import Cars from './Cars.js'
 import HomePage from './HomePage.js'
 import CarID from './CarID';
+import CarMake from './CarMake';
 
 
 function App() {
@@ -10,10 +11,12 @@ function App() {
     <div className="App">
 
       <Router>
+        
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/cars" element={<Cars />} />
           <Route path="/carid" element={<CarID />} />
+          <Route path="/carmake" element={<CarMake />} />
         </Routes>
       </Router>
 
