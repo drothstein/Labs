@@ -11,4 +11,3 @@ Lab 5 was the frontend portion of this website. I made the website you can use t
 
 # STORYBOARD
 ![](./my-figma.png)
-![](./figma.pdf)
