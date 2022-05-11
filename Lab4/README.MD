@@ -10,4 +10,4 @@ Lab 4 was the backend portion of this website. In lab 4, I made a sqlite3 databa
 Lab 5 was the frontend portion of this website. I made the website you can use to communicate with the database. You can view all of the cars from the database, search for one, add new car, and update exisitng car.
 
 # STORYBOARD
-![](./my-figma.png)
+![](./storyboard.png)
