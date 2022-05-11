@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import './App.css';
+import { useNavigate } from "react-router-dom";
 
 export default function Cars() {
     const [allCars, setAllCars] = useState([])
+    let navigateTo = useNavigate()
 
     async function getData() {
         try {
@@ -18,6 +21,7 @@ export default function Cars() {
 
     return (
         <div>
+            <button onClick={() => navigateTo('/')}>Go Back</button>
             <h1>ALL CARS</h1>
             <button onClick={getData}>Fetch all cars</button>
             <table>

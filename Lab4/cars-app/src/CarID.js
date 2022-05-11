@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './App.css';
 
 export default function CarID() {
     const [allCars, setAllCars] = useState([])

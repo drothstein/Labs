@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
+import CarID from './CarID.js'
+import './App.css';
 
 export default function EditCar() {
     const [form, setForm] = useState({ timestamp: null, email: null, name: null, year: null, make: null, model: null, car_id: null, judge_id: null, judge_name: null, racer_turbo: null, racer_supercharged: null, racer_performance: null, racer_horsepower: null, car_overall: null, engine_modifications: null, engine_performance: null, engine_chrome: null, engine_detailing: null, engine_cleanliness: null, body_frame_undercarriage: null, body_frame_suspension: null, body_frame_chrome: null, body_frame_detailing: null, body_frame_cleanliness: null, mods_paint: null, mods_body: null, mods_wrap: null, mods_rims: null, mods_interior: null, mods_other: null, mods_ice: null, mods_aftermarket: null, mods_wip: null, mods_overall: null })
+    const [carId, setCarId] = useState()
 
-    async function addData() {
+    async function editData() {
         try {
-            const res = await fetch('http://localhost:8080/cars/new', {
+            setCarId(form.car_id)
+            const res = await fetch('http://localhost:8080/cars/update/' + form.car_id, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
@@ -63,7 +67,7 @@ export default function EditCar() {
         const value = event.target.value
         setForm({ ...form, [name]: value })
         console.log(form)
-        addData()
+        editData()
     }
     function handleChange(event) {
         const name = event.target.getAttribute('name')
@@ -73,7 +77,15 @@ export default function EditCar() {
     return (
         <div>
 
-            <h1>ADD CAR</h1>
+            <h1>UPDATE CAR</h1>
+
+            <h1>search with car id</h1>
+            <br></br>
+
+            <CarID />
+
+            <h1>update car details</h1>
+            <br></br>
 
             <form onSubmit={handleSubmit}>
                 <p>timestamp</p>

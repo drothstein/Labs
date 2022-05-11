@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './App.css';
 
 export default function AddCar() {
     const [form, setForm] = useState({ timestamp: null, email: null, name: null, year: null, make: null, model: null, car_id: null, judge_id: null, judge_name: null, racer_turbo: null, racer_supercharged: null, racer_performance: null, racer_horsepower: null, car_overall: null, engine_modifications: null, engine_performance: null, engine_chrome: null, engine_detailing: null, engine_cleanliness: null, body_frame_undercarriage: null, body_frame_suspension: null, body_frame_chrome: null, body_frame_detailing: null, body_frame_cleanliness: null, mods_paint: null, mods_body: null, mods_wrap: null, mods_rims: null, mods_interior: null, mods_other: null, mods_ice: null, mods_aftermarket: null, mods_wip: null, mods_overall: null })
@@ -50,8 +51,7 @@ export default function AddCar() {
             const resJSON = await res.json()
             console.log(resJSON)
             alert('Done')
-            console.log('TEST with .data', resJSON.data[0].Timestamp)
-            console.log('TEST without', resJSON[0].Timestamp)
+           
         } catch (error) {
             console.log(error)
         }

@@ -37,4 +37,13 @@
   }
 }
 
+th, td, tr, form {
+  border: 1.5px solid blue;
+}
 
+form {
+  width: fit-content;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

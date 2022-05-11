@@ -1,5 +1,6 @@
 import React from 'react'
 import {Navigate, useNavigate} from 'react-router-dom'
+import './App.css';
 
 export default function HomePage() {
     let navigateTo = useNavigate()
