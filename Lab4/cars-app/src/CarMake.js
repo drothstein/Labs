@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import './App.css';
+import { useNavigate } from "react-router-dom";
 
 export default function CarMake() {
     const [allCars, setAllCars] = useState([])
     const [carMake, setCarMake] = useState()
+    let navigateTo = useNavigate()
 
     async function getData() {
         try {
@@ -20,6 +22,7 @@ export default function CarMake() {
 
     return (
         <div>
+            <button onClick={() => navigateTo('/')}>Go Back</button>
             <h1>CAR MAKE</h1>
             <p>Please enter car make starting with a capital letter</p>
             <input onChange={(event) => setCarMake(event.target.value)} />

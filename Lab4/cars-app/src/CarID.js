@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import './App.css';
+import { useNavigate } from "react-router-dom";
 
 export default function CarID() {
     const [allCars, setAllCars] = useState([])
     const [carId, setCarId] = useState()
-
+    let navigateTo = useNavigate()
+    
     async function getData() {
         try {
             const res = await fetch('http://localhost:8080/cars/car_id/' + carId)
@@ -20,6 +22,7 @@ export default function CarID() {
 
     return (
         <div>
+             <button onClick={() => navigateTo('/')}>Go Back</button>
             <h1>CAR ID</h1>
             <input onChange={(event) => setCarId(event.target.value)} />
             <button onClick={getData}>Fetch one car</button>
